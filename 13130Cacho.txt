@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+class Main {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] dice = new int[5];
+        char scale;
+        
+        for (int i = 0; i < n; i++) {
+            scale = 'Y';
+            for (int j = 0; j < 5; j++) {
+                dice[j] = in.nextInt();
+            }
+            for (int j = 0; j < 4; j++) {
+                if (dice[j] != dice[j+1] - 1) {
+                    scale = 'N';
+                }
+            }
+            System.out.println(scale);
+        }
+    }
+}

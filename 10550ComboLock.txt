@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+class Main {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int degrees;
+        int curPos;
+        int numOne;
+        int numTwo;
+        int numThree;
+        while (true) {
+            degrees = 120;
+            curPos = in.nextInt();
+            numOne = in.nextInt();
+            numTwo = in.nextInt();
+            numThree = in.nextInt();
+            if (curPos == 0 && numOne == 0 && numTwo == 0 && numThree == 0) {
+                break;
+            }
+                in.nextLine();
+            if (numOne < curPos) {
+                degrees += (curPos - numOne);
+            } else {
+                degrees += (40 - (numOne - curPos));
+            }
+            if (numTwo > numOne) {
+                degrees += (numTwo - numOne);
+            } else {
+                degrees += (40 - (numOne - numTwo));
+            }
+            if (numThree < numTwo) {
+                degrees += (numTwo - numThree);
+            } else {
+                degrees += (40 - (numThree - numTwo));
+            }
+            System.out.println(9 * degrees);
+        }
+    }
+}
