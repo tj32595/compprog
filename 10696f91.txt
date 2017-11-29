@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+class Main {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        
+        int x;
+        while ((x = in.nextInt()) != 0) {
+            System.out.println("f91(" + x + ") = " + f91(x));
+        }
+        
+    }
+    
+    public static int f91(int x) {
+        if (x <= 100) {
+            return f91(f91(x + 11));
+        }
+        else {
+            return x - 10;
+        }
+    }
+}

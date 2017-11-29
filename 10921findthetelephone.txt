@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+class Uva {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        char[] line;
+        int[] number;
+        int length;
+
+        while (in.hasNext()) {
+            line = in.nextLine().toCharArray();
+            length = line.length;
+            for (int i = 0; i < length; i++) {
+                line[i] = charToNum(line[i]);
+            }
+            for (int i = 0; i < length; i++) {
+                System.out.print(line[i]);
+            }
+            System.out.println();
+        }
+    }
+
+    public static char charToNum(char c) {
+        c = Character.toLowerCase(c);
+        int asciiC = (int) c;
+        if (asciiC > 47 && asciiC <= 57 || asciiC == 45) {
+            return c;
+        } else if (asciiC > 96) {
+            if (asciiC <= 99) {
+                return '2';
+            } else if (asciiC <= 102) {
+                return '3';
+            } else if (asciiC <= 105) {
+                return '4';
+            } else if (asciiC <= 108) {
+                return '5';
+            } else if (asciiC <= 111) {
+                return '6';
+            } else if (asciiC <= 115) {
+                return '7';
+            } else if (asciiC <= 118) {
+                return '8';
+            } else if (asciiC <= 122) {
+                return '9';
+            }
+        }
+
+        return 0;
+    }
+
+}

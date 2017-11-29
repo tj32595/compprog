@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+class Main {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int t = in.nextInt();
+        int first;
+        int second;
+        int third;
+        for (int i = 1; i <= t; i++) {
+            first = in.nextInt();
+            second = in.nextInt();
+            third = in.nextInt();
+            System.out.printf("Case %d: ", i);
+            if ((first <= second && first >= third) || (first <= third && first >= second)) {
+                System.out.println(first);
+            }
+            else if ((second <= first && second >= third) || (second <= third && second >= first)) {
+                System.out.println(second);
+            }
+            else {
+                System.out.println(third);
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class Main {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int t = in.nextInt();
+        int first;
+        int second;
+        while (t --> 0) {
+            first = in.nextInt();
+            second = in.nextInt();
+            if (first < second) {
+                System.out.println("<");
+            }
+            else if (first == second) {
+                System.out.println("=");
+            }
+            else {
+                System.out.println(">");
+            }
+        }
+    }
+}

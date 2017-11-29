@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+class Uva {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        
+        int t = in.nextInt();
+        String word;
+        int two;
+        int one;
+        
+        while (t --> 0) {
+            word = in.next();
+            if (word.length() == 5) {
+                System.out.println(3);
+            }
+            else {
+                char[] letters = word.toCharArray();
+                one = 0;
+                two = 0;
+                
+                if (letters[0] == 'o') {
+                    one++;
+                }
+                if (letters[1] == 'n') {
+                    one++;
+                }
+                if (letters[2] == 'e') {
+                    one++;
+                }
+                if (letters[0] == 't') {
+                    two++;
+                }
+                if (letters[1] == 'w') {
+                    two++;
+                }
+                if (letters[2] == 'o') {
+                    two++;
+                }
+                if (one > two) {
+                    System.out.println(1);
+                }
+                else {
+                    System.out.println(2);
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+class Uva {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        
+        int m, n;
+        int mRem, nRem;
+        int t = in.nextInt();
+        
+        while (t --> 0) {
+            m = in.nextInt() - 2;
+            n = in.nextInt() - 2;
+            
+            mRem = m % 3;
+            m /= 3;
+            nRem = n % 3;
+            n /= 3;
+            
+            if (mRem != 0) {
+                m++;
+            }
+            if (nRem != 0) {
+                n++;
+            }
+            
+            System.out.println(m * n);
+        }
+        
+    }
+    
+}
